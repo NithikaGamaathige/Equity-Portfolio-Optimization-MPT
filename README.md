@@ -14,15 +14,18 @@ Evaluating performance using the Capital Asset Pricing Model (CAPM) framework.
 Implementing financial models using Python (Google Colab) and Microsoft Excel.
 
 ## Project Structure
+
+
 ├── data/
-│   └── stock_data.csv          # 3+ years of historical daily/monthly returns
+│   └── stock_data.csv          # 3+ years of historical return data [cite: 24]
 ├── notebooks/
-│   └── Portfolio_Analysis.ipynb # Python code for optimization & CAPM regression
+│   └── Portfolio_Analysis.ipynb # Python code for optimization & CAPM [cite: 89]
 ├── excel/
-│   └── Portfolio_Solver.xlsx   # Return calculations, matrices, and Solver models
+│   └── Portfolio_Solver.xlsx   # Return calculations & Solver models [cite: 82]
 ├── reports/
-│   └── Final_Report.pdf        # 5-page formal academic report
+│   └── Final_Report.pdf        # 5-page formal academic report [cite: 98]
 └── README.md                   # Project documentation
+
 
 ## Technical Implementation
 ### 1. Data Preparation & Exploratory Analysis
