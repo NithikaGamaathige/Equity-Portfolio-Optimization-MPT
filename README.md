@@ -1,7 +1,20 @@
 # Equity-Portfolio-Optimization-MPT
 A quantitative analysis project implementing Modern Portfolio Theory (MPT) and the Capital Asset Pricing Model (CAPM) to optimize a 6 stock equity portfolio using Python and Excel.
 
-FM3054: Equity Portfolio Optimization & CAPM AnalysisThis repository contains the mid-term take-home assignment for FM3054: Portfolio Optimization at the University of Colombo, Department of Mathematics. This project demonstrates the practical application of Modern Portfolio Theory (MPT) and the Capital Asset Pricing Model (CAPM) using quantitative tools.Project OverviewAs a junior quantitative portfolio analyst, I have constructed and evaluated optimal equity portfolios for a hypothetical investor. The analysis utilizes 3+ years of historical market data for a selected universe of 5-8 listed equities.Key Learning OutcomesRisk Management: Identifying portfolio construction as a tool for risk mitigation.Optimization: Designing portfolios under realistic constraints (e.g., short-selling vs. long-only).Efficient Frontier: Constructing and interpreting the Mean-Variance Frontier and Capital Market Line (CML).CAPM Evaluation: Assessing performance using Beta, Jensen's Alpha, and risk decomposition.Project Structure├── data/
+# FM3054: Equity Portfolio Optimization & CAPM Analysis
+This repository contains the mid-term take-home assignment for FM3054: Portfolio Optimization at the University of Colombo, Department of Mathematics. The project serves as a practical implementation of Modern Portfolio Theory (MPT) and the Capital Asset Pricing Model (CAPM).
+
+## Project Overview
+Acting as a junior quantitative portfolio analyst, I have constructed and evaluated an optimal equity portfolio using a selected universe of 5-8 listed equities over a minimum 3-year sample period. The analysis integrates historical market data with computational optimization techniques to identify efficient investment allocations.
+
+## Key Learning Outcomes
+Designing and optimizing equity portfolios under realistic constraints.
+Constructing and interpreting the Mean-Variance Efficient Frontier and the Capital Market Line (CML).
+Evaluating performance using the Capital Asset Pricing Model (CAPM) framework.
+Implementing financial models using Python (Google Colab) and Microsoft Excel.
+
+## Project Structure
+├── data/
 │   └── stock_data.csv          # 3+ years of historical daily/monthly returns
 ├── notebooks/
 │   └── Portfolio_Analysis.ipynb # Python code for optimization & CAPM regression
@@ -10,4 +23,23 @@ FM3054: Equity Portfolio Optimization & CAPM AnalysisThis repository contains th
 ├── reports/
 │   └── Final_Report.pdf        # 5-page formal academic report
 └── README.md                   # Project documentation
-Technical Implementation1. Data Preparation & Exploratory AnalysisMetrics: Computed annualized mean returns, volatility, and covariance/correlation matrices.Exploratory Tools: Risk-return scatter plots and correlation heatmaps to identify diversification benefits.2. Portfolio Construction & OptimizationThree distinct portfolios were constructed both with and without short-selling constraints:Minimum Volatility Portfolio: The global minimum variance point.Maximum Sharpe Ratio Portfolio: The tangency portfolio on the efficient frontier.Equal-Weighted Portfolio: The benchmark for performance comparison.3. Efficient Frontier & CMLThe Mean-Variance Efficient Frontier was derived using the Lagrangian Multiplier method.For the Minimum Volatility portfolio, the objective is:$$\min \sigma_p^2 = w^T \Sigma w$$Subject to:$$\sum_{i=1}^{n} w_i = 1$$The Capital Market Line (CML) was introduced by incorporating a risk-free asset consistent with the target market.4. CAPM-Based EvaluationBeta Estimation: Calculated for individual assets and the optimized portfolios.Jensen's Alpha: Used to identify abnormal returns relative to market expectations.Risk Decomposition: Total risk was partitioned into:Systematic Risk: $\beta^2 \sigma_m^2$Idiosyncratic Risk: $\sigma_{\epsilon}^2$How to UsePython: Open notebooks/Portfolio_Analysis.ipynb in Google Colab to view the code, optimization routines, and plots.Excel: Use excel/Portfolio_Solver.xlsx to see the underlying mathematical formulas and the Solver parameters used for weighting.Report: Read reports/Final_Report.pdf for a critical discussion on estimation errors and the practical limitations of MPT.Academic IntegrityThis is an individual assignment completed as part of the course requirements for FM3054. All code and analysis were performed independently.AuthorCourse: FM3054 - Portfolio OptimizationInstitution: University of ColomboStudent ID: [Your Student ID s-19xxx]
+
+## Technical Implementation
+### 1. Data Preparation & Exploratory Analysis
+Metrics: Computed annualized mean returns, volatility, and covariance/correlation matrices.Visuals: Risk-return profiles and correlation heatmaps.
+### 2. Portfolio Construction
+I constructed the following portfolios with and without short-selling constraints:
+Minimum Volatility Portfolio: Minimizes variance for a given level of return.
+Maximum Sharpe Ratio Portfolio: Maximizes the excess return per unit of risk.
+Equal-Weighted Portfolio: Serves as the baseline benchmark.
+### 3. Efficient Frontier Analysis
+Derived the Mean-Variance Efficient Frontier using the Lagrangian Multiplier method. The optimization problem for the Minimum Volatility portfolio is defined as:$$\min \sigma_p^2 = w^T \Sigma w$$Subject to:$$\sum_{i=1}^{n} w_i = 1$$The Capital Market Line (CML) was constructed by introducing a risk-free asset consistent with the chosen market.
+### 4. CAPM-Based Evaluation
+Beta Estimation: Calculated systematic risk for individual stocks and optimized portfolios.
+Jensen's Alpha: Measured the abnormal return of the portfolios over the CAPM predicted return.
+Risk Decomposition: Partitioned total risk into Systematic (Market) and Idiosyncratic (Specific) components.
+
+## How to Use
+Python Notebook: Open notebooks/Portfolio_Analysis.ipynb in Google Colab. The code is well-commented and utilizes scipy.optimize for quadratic programming and seaborn for financial visualizations.
+Excel Workbook: The excel/Portfolio_Solver.xlsx file contains the manual calculation of the covariance matrix and utilizes the Excel Solver Add-in for portfolio weighting.
+Written Report: The reports/Final_Report.pdf provides the economic interpretation and critical assessment of the results.
